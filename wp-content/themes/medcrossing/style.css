@@ -1,0 +1,80 @@
+/*
+Theme Name: MedCrossing
+Theme URI: https://example.com/medcrossing
+Author: Your Name
+Author URI: https://example.com
+Description: A simple custom WordPress theme
+Version: 1.0
+*/
+
+@font-face {
+    font-family: Gilroy-Regular ;
+    src: url(assets/fonts/gilroy/Gilroy-Regular.ttf);
+}
+
+.header_cta{
+    border: 1px solid #8B1B1D !important;
+    border-radius: 10px;
+    padding: 10px 21px 8px 21px !important;
+}
+.nav-link{
+    font-family: Gilroy-Regular ;
+    color: #000 !important;
+    margin-left: 30px;
+}
+
+nav .nav-link:after {
+   content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: relative;
+    background: #8B1B1D;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    bottom: -7px;
+}
+nav .nav-link:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.header_cta::after{
+    display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+.nav-link{
+    margin-left: 0px !important;
+}
+}
+
+
+@media only screen and (max-width: 1200px) and (min-width: 1000px)  {
+.nav-link{
+    font-size: 13px !important;
+}
+}
+
+
+footer .nav-link{
+    border-right: 1px solid #494949;
+    padding-right: 31px !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #000 !important;
+}
+footer .nav-item:last-child .nav-link{
+    border-right: none;
+}
+
+.social-icons a{
+    border: 1px solid #8b1b1d54;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+}
