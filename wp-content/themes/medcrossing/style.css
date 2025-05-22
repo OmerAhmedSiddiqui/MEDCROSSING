@@ -8,73 +8,309 @@ Version: 1.0
 */
 
 @font-face {
-    font-family: Gilroy-Regular ;
-    src: url(assets/fonts/gilroy/Gilroy-Regular.ttf);
+  font-family: Gilroy-Regular;
+  src: url(assets/fonts/gilroy/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url(assets/fonts/gilroy/Gilroy-ExtraBold.ttf);
 }
 
-.header_cta{
-    border: 1px solid #8B1B1D !important;
-    border-radius: 10px;
-    padding: 10px 21px 8px 21px !important;
+.padder {
+  padding: 120px 0px;
 }
-.nav-link{
-    font-family: Gilroy-Regular ;
-    color: #000 !important;
-    margin-left: 30px;
+
+.spacer {
+  margin-bottom: 100px;
+}
+
+.header_cta {
+  border: 1px solid #8b1b1d !important;
+  border-radius: 10px;
+  padding: 10px 21px 8px 21px !important;
+}
+.nav-link {
+  font-family: Gilroy-Regular;
+  color: #000 !important;
+  margin-left: 30px;
 }
 
 nav .nav-link:after {
-   content: "";
-    display: block;
-    height: 1px;
-    left: 50%;
-    position: relative;
-    background: #8B1B1D;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-    bottom: -7px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: relative;
+  background: #8b1b1d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  bottom: -7px;
 }
 nav .nav-link:hover:after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
-.header_cta::after{
-    display: none !important;
+.header_cta::after {
+  display: none !important;
 }
 
 @media only screen and (max-width: 767px) {
-.nav-link{
+  .nav-link {
     margin-left: 0px !important;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: center;
+  }
+  .doctor_form {
+    padding: 40px 20px !important;
+  }
+  body select,
+  body input {
+    height: 48px !important;
+  }
+  .labels {
+  justify-content: center;
+}
+section.footer_last_fold {
+  padding-bottom: 100px;
+}
+section.footer_last_fold .cta{
+  display:block ;
+  margin: 0 auto;
+  width: fit-content !important;
 }
 }
 
+@media only screen and (max-width: 1024px) {
+  section.section_bg_black {
+    background: #000 !important;
+}
+}
 
-@media only screen and (max-width: 1200px) and (min-width: 1000px)  {
-.nav-link{
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  .nav-link {
     font-size: 13px !important;
-}
-}
-
-
-footer .nav-link{
-    border-right: 1px solid #494949;
-    padding-right: 31px !important;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    color: #000 !important;
-}
-footer .nav-item:last-child .nav-link{
-    border-right: none;
+  }
 }
 
-.social-icons a{
-    border: 1px solid #8b1b1d54;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 8px;
+footer .nav-link {
+  border-right: 1px solid #494949;
+  padding-right: 31px !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #000 !important;
+}
+footer .nav-item:last-child .nav-link {
+  border-right: none;
+}
+
+.social-icons a {
+  border: 1px solid #8b1b1d54;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+}
+
+h1,
+h2,h3 {
+  font-family: Gilroy-ExtraBold;
+  font-size: 40px !important;
+  line-height: 60px;
+  color: #000 !important;
+}
+h3{
+    font-size: 24px !important;
+}
+p,li,a {
+  font-family: Gilroy-Regular;
+  font-size: 18px !important;
+  color: #494949 !important;
+}
+
+.doctor_form {
+  background: #000;
+  width: 473px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 30px;
+  max-width: 100%;
+  min-height: 590px;
+}
+
+.doctor_form h2 {
+  color: #fff !important;
+  margin-bottom: 40px;
+}
+
+select,
+input {
+  background: #fff;
+  height: 62px !important;
+}
+#fluentform_3_success,#fluentform_3_errors{
+    color: #fff;
+}
+select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: url('data:image/svg+xml;utf8,<svg fill="black" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 0.75rem center !important;
+  background-color: white !important;
+  padding-right: 2rem; /* Space for the arrow */
+}
+
+input::placeholder,
+select::placeholder {
+  color: #494949 !important;
+}
+
+.ff-btn,.cta {
+  background: #8b1b1d !important;
+  width: 100%;
+  padding: 15px !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+    font-family: Gilroy-ExtraBold !important;
+text-decoration: none;
+font-size: 20px;
+}
+.cta {
+    padding: 20px 80px !important;
+    width: auto !important;
+    margin-top: 50px;
+  border-radius: 10px !important;
+
+}
+section.section_one {
+  background: url(http://dev.medcrossing.com/wp-content/themes/medcrossing/assets/img/section_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+}
+.labels p {
+  background: #ffddde;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #000 !important;
+  margin-right: 10px;
+}
+
+.middle_section img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px !important; /* rounded corners */
+  background: #fff;   /* white background */
+  padding: 40px 24px;      /* example padding */
+  transition: box-shadow 0.3s ease;
+  border: none !important;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right 20px top 40px;
+}
+.card p{
+    text-align: left;
+}
+.cards .col-lg-3:nth-child(2) .card{
+  background-image: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/1.png);
+}
+.cards .col-lg-3:nth-child(3) .card {
+  background-image: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/2.png);
+}
+.cards .col-lg-3:nth-child(4)  .card{
+  background-image: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/3.png);
+}
+.cards .col-lg-3:nth-child(5)  .card{
+  background-image: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/4.png);
+}
+.divider {
+    border: 1px solid #D7D7D7;
+}
+button.accordion-button ,.accordion-item{
+  border: none !important;
+  box-shadow: none !important;
+}
+button.accordion-button {
+    background: #FAF5F6 !important;
+    color: #222F38 !important;
+  font-family: Gilroy-Regular;
+  display: flex;
+  align-items: center;
+border-radius: 10px;
+margin-top: 30px;
+font-weight: 600;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+button.accordion-button  img{
+  margin-right: 20px;
+}
+.faqs h3,section.section_bg_black h3,.section_bg h3{
+  font-size: 21px !important;
+  line-height: 60px;
+}
+.faqs ul {
+    list-style-image: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/Vector-22.png);
+    line-height: 50px;
+}
+.section_bg{
+  background:linear-gradient(to bottom, #fbeeee, #fef9f8) ;
+  padding: 120px 0px;
+}
+.red_link{
+  color:#8B1B1D !important;
+  text-decoration: none !important;  
+}
+section.section_bg_black {
+    background: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/Group-1000006840.png);
+    padding: 120px 0;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.faqs.section_bg button.accordion-button{
+  background: #fff !important;
+  box-shadow: none !important;
+padding: 8px 30px;
+
+      
+}
+.faqs.section_bg .accordion-item{
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+border-radius: 10px !important;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+section.footer_last_fold {
+    background: url(http://dev.medcrossing.com/wp-content/uploads/2025/05/Rectangle-28.png);
+    background-size: cover;
+    padding-top: 50px;
+}
+section.footer_last_fold .cta{
+  display:block ;
+  margin: 0 auto;
 }
